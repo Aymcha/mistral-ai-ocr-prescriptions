@@ -7,11 +7,15 @@ import io
 import os
 import base64
 import psycopg2
-import re
+import locale
+
 
 # Load environment variables
 load_dotenv()
-locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
+try:
+    locale.setlocale(locale.LC_TIME, 'fr_FR.UTF-8')
+except locale.Error:
+    locale.setlocale(locale.LC_TIME, 'C') 
 
 
 # ------------------------------------------

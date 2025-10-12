@@ -1,0 +1,92 @@
+# ===================================
+# 🖥️ macOS & VSCode
+# ===================================
+.DS_Store
+.vscode/
+
+# ===================================
+# 📦 Python
+# ===================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.venv*/
+venv*/
+.env.bak
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheels/
+
+# Logs & debug
+*.log
+*.out
+*.err
+logs/
+debug.log
+
+# ===================================
+# ⚙️ Environment & configuration
+# ===================================
+.env
+.env.local
+.env.test
+.env.dev
+.env.prod
+
+# ===================================
+# 🧪 Testing
+# ===================================
+.coverage
+.tox/
+.nox/
+pytest_cache/
+htmlcov/
+coverage.xml
+.pytest_cache/
+.pyre/
+mypy_cache/
+
+# ===================================
+# 🧠 Mistral / Cache
+# ===================================
+.mistral_cache/
+mistral_logs/
+cache/
+__cache__/
+
+# ===================================
+# 📁 Data & uploads
+# ===================================
+uploads/
+data/
+datasets/
+*.csv
+*.tsv
+*.json
+*.sqlite3
+*.db
+*.parquet
+*.zip
+*.tar.gz
+
+# ===================================
+# 🚀 OS files
+# ===================================
+Thumbs.db
+ehthumbs.db
+desktop.ini
+Icon?

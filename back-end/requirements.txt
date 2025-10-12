@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+mistralai
+python-Levenshtein
+unicodedata2
+Pillow
+psycopg2-binary
+Babel

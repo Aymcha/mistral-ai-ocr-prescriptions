@@ -6,8 +6,9 @@ temp/
 .angular/
 coverage/
 
-# --- Environment files ---
-src/environments/environment*.ts
+# Ignore only local secret env files (if you ever add some)
+src/environments/environment.local.ts
+src/environments/.env
 
 # --- Logs and temporary files ---
 npm-debug.log*

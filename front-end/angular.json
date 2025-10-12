@@ -63,20 +63,14 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "extractLicenses": true,
               "sourceMap": false,
-              "namedChunks": false,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "aot": true
             },
             "development": {
-              "fileReplacements": [],
               "optimization": false,
-              "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true,
-              "vendorChunk": true
+              "aot": true,
+              "extractLicenses": false
             }
           },
           "defaultConfiguration": "production"

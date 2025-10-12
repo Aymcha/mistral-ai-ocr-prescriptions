@@ -1,0 +1,67 @@
+# --- Node / Angular standard ---
+node_modules/
+dist/
+.tmp/
+temp/
+.angular/
+coverage/
+
+# --- Environment files ---
+src/environments/environment*.ts
+
+# --- Logs and temporary files ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# --- IDE / Editors ---
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# --- OS / System files ---
+.DS_Store        # macOS metadata file, always ignore
+Thumbs.db        # Windows metadata file
+*/.DS_Store
+**/.DS_Store
+
+# --- Cache & build tools ---
+package-lock.json
+*.bak
+*.tmp
+*.swp
+
+# --- Testing ---
+/test-output
+/karma-coverage
+/coverage
+*.spec.ts
+
+# --- Generated documentation ---
+/documentation
+/doc
+/docs
+
+# --- Environment / secrets ---
+.env
+*.local
+*.secret.*
+
+# --- Build artifacts ---
+build/
+*.tar.gz
+*.zip
+
+# Ignore generated media or reports ---
+/Output_Images/
+/Screenshots/
+/Reports/
+
+# --- Essential config files ---
+!angular.json
+!tsconfig*.json
+!package*.json
+!README.md

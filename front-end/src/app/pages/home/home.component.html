@@ -1,0 +1,134 @@
+<div class="home-container">
+  <h1 class="page-title">Home Page</h1>
+
+  <div class="file-input-container">
+    <input type="file" class="file-input" (change)="onFileSelected($event)" accept="image/*, application/pdf" />
+    <button class="submit-button" (click)="onSubmit()">Submit</button>
+  </div>
+
+  <div *ngIf="ordonnanceData" class="ordonnance-container">
+    <h2 class="section-title">Ordonnance Details</h2>
+
+    <div class="details">
+      <p>
+        <strong>Normal Treatment:</strong> {{ ordonnanceData.normal_treatment.value }} <br />
+        <strong>Confidence:</strong> {{ ordonnanceData.normal_treatment.confidence }}
+      </p>
+      <p>
+        <strong>ALD Treatment:</strong> {{ ordonnanceData.ald_treatment.value || 'N/A' }} <br />
+        <strong>Confidence:</strong> {{ ordonnanceData.ald_treatment.confidence || 'N/A' }}
+      </p>
+    </div>
+
+    <!-- AM FINESS Number -->
+    <div class="field-container">
+      <label for="amFinessNumber" class="field-label">AM FINESS Number:</label>
+      <div *ngIf="isAmFinessNumberList; else singleValue">
+        <select
+          class="select-field"
+          [(ngModel)]="selectedAmFinessNumber"
+          [ngModelOptions]="{ updateOn: 'change' }"
+        >
+          <option *ngFor="let number of ordonnanceData.am_finess_number.value" [value]="number">
+            {{ number }}
+          </option>
+        </select>
+      </div>
+      <ng-template #singleValue>
+        <select
+          class="select-field"
+          [(ngModel)]="selectedAmFinessValue"
+          [compareWith]="compareSelectedValues"
+        >
+          <option
+            [ngValue]="{ value: ordonnanceData.best_am_finess_number.value, type: 'best_match' }"
+          >
+            {{ ordonnanceData.best_am_finess_number.value }} (Best Match)
+          </option>
+          <option
+            [ngValue]="{ value: ordonnanceData.am_finess_number.value, type: 'extracted' }"
+          >
+            {{ ordonnanceData.am_finess_number.value }} (Extracted)
+          </option>
+        </select>
+      </ng-template>
+      <input
+        type="text"
+        class="input-field"
+        [(ngModel)]="selectedAmFinessValue.value"
+        placeholder="Modify AM FINESS Number"
+        (ngModelChange)="selectedAmFinessValue.type = 'modified'"
+      />
+      <p class="confidence-text">
+        <strong>Extracted Confidence:</strong> {{ ordonnanceData.am_finess_number.confidence || 'N/A' }}
+      </p>
+    </div>
+
+    <!-- Prescriber Name -->
+    <div class="field-container">
+      <label for="prescriberName" class="field-label">Prescriber Name:</label>
+      <select
+        class="select-field"
+        [(ngModel)]="selectedPrescriberValue"
+        [compareWith]="compareSelectedValues"
+      >
+        <option
+          [ngValue]="{ value: ordonnanceData.best_prescriber_name.value, type: 'best_match' }"
+        >
+          {{ ordonnanceData.best_prescriber_name.value }} (Best Match)
+        </option>
+        <option
+          [ngValue]="{ value: ordonnanceData.prescriber_name.value, type: 'extracted' }"
+        >
+          {{ ordonnanceData.prescriber_name.value }} (Extracted)
+        </option>
+      </select>
+      <input
+        type="text"
+        class="input-field"
+        [(ngModel)]="selectedPrescriberValue.value"
+        placeholder="Modify Prescriber Name"
+        (ngModelChange)="selectedPrescriberValue.type = 'modified'"
+      />
+      <p class="confidence-text">
+        <strong>Extracted Confidence:</strong> {{ ordonnanceData.prescriber_name.confidence || 'N/A' }}
+      </p>
+    </div>
+
+    <!-- RPPS Number -->
+    <div class="field-container">
+      <label for="rppsNumber" class="field-label">RPPS Number:</label>
+      <select
+        class="select-field"
+        [(ngModel)]="selectedRppsValue"
+        [compareWith]="compareSelectedValues"
+      >
+        <option
+          [ngValue]="{ value: ordonnanceData.best_rpps_number.value, type: 'best_match' }"
+        >
+          {{ ordonnanceData.best_rpps_number.value }} (Best Match)
+        </option>
+        <option
+          [ngValue]="{ value: ordonnanceData.rpps_number.value, type: 'extracted' }"
+        >
+          {{ ordonnanceData.rpps_number.value }} (Extracted)
+        </option>
+      </select>
+      <input
+        type="text"
+        class="input-field"
+        [(ngModel)]="selectedRppsValue.value"
+        placeholder="Modify RPPS Number"
+        (ngModelChange)="selectedRppsValue.type = 'modified'"
+      />
+      <p class="confidence-text">
+        <strong>Extracted Confidence:</strong> {{ ordonnanceData.rpps_number.confidence || 'N/A' }}
+      </p>
+    </div>
+
+    <p>
+      <strong>Prescription Date:</strong> {{ ordonnanceData.prescription_date.value }} <br />
+      <strong>Confidence:</strong> {{ ordonnanceData.prescription_date.confidence }}
+    </p>
+  </div>
+</div>

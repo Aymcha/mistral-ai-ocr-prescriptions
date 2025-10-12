@@ -1,0 +1,98 @@
+/* Global container */
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Page title */
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* File input and submit button */
+.file-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+/* Ordonnance container */
+.ordonnance-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Details section */
+.details {
+  margin-bottom: 20px;
+}
+
+/* Fields container */
+.field-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.field-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.select-field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}

@@ -1,13 +1,13 @@
-# 🧠 Prescription Intelligence — AI-Powered Extraction & Validation
+#  Prescription Intelligence — AI-Powered Extraction & Validation
 
 This project is a **full-stack system** that reads, extracts, and validates information from medical prescriptions using **Mistral AI** and **a public French healthcare database**.  
 It performs **OCR extraction**, **LLM-based field recognition**, and **cross-matching with national RPPS/FINESS registries** to ensure medical data consistency.
 
 ---
 
-## 🚀 Features
+##  Features
 
-### 🧩 Back-End (FastAPI + Mistral AI)
+###  Back-End (FastAPI + Mistral AI)
 - **OCR extraction** of prescription images via `mistral-ocr-latest`.
 - **LLM reasoning** (`mistral-small-latest`) to structure data into:
   - Normal treatment (`Texte-soin-sans-ALD`)
@@ -25,7 +25,7 @@ It performs **OCR extraction**, **LLM-based field recognition**, and **cross-mat
   - Automatic date formatting and rejection of future dates.
   - Removal of blank or inconsistent values.
 
-### 💻 Front-End (Angular)
+###  Front-End (Angular)
 - File upload (image or PDF) interface.
 - Live display of:
   - Extracted prescription fields.
@@ -35,7 +35,7 @@ It performs **OCR extraction**, **LLM-based field recognition**, and **cross-mat
 
 ---
 
-## 🧱 Project Structure
+##  Project Structure
 
 ```
 project/
@@ -60,9 +60,9 @@ project/
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
-### 🧠 Back-End Setup
+###  Back-End Setup
 
 1. Navigate to the back-end directory:
    ```bash
@@ -122,7 +122,7 @@ project/
 
 ---
 
-## 🔄 How It Works
+##  How It Works
 
 1. **Upload a prescription** (JPEG or PDF).  
 2. **OCR extraction** using Mistral AI to read text content.  
@@ -141,7 +141,7 @@ Example:
 
 ---
 
-## 🧪 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-------------|
@@ -154,7 +154,7 @@ Example:
 
 ---
 
-## 📋 Requirements
+##  Requirements
 
 - Python ≥ 3.10  
 - Node.js ≥ 18  
@@ -162,7 +162,7 @@ Example:
 
 ---
 
-## 📜 License
+##  License
 
 This project uses **public open data** from the *Annuaire Santé Français*.  
 The source database and its credentials are intentionally public.  
